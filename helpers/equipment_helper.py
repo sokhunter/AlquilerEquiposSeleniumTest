@@ -1,6 +1,8 @@
 import unittest
 from selenium.webdriver.support.ui import Select
 
+import time
+
 class Equipment_helper():
 	def __init__(self, driver):
 		self.driver = driver
@@ -16,7 +18,7 @@ class Equipment_helper():
 		driver.find_element_by_id("Layout_btn_Equipo").click()
 		driver.implicitly_wait(5)
 
-	def save(self, code, name, document):
+	def save(self, code, name, description, price, status):
 		my_assertion = unittest.TestCase('__init__')
 		driver = self.driver
 
@@ -37,7 +39,7 @@ class Equipment_helper():
 		txtPrice.send_keys(price)
 
 		cbxStade = Select(driver.find_element_by_id("Equipo_ddl_Estado"))
-		cbxStade.select_by_index(2)
+		cbxStade.select_by_value(status)
 
 		driver.find_element_by_id("Equipo_btn_Guardar").click()
 		driver.implicitly_wait(5)

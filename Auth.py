@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+import HtmlTestRunner
 from helpers.auth_helper import *
 
 class Auth(unittest.TestCase):
@@ -64,8 +65,7 @@ class Auth(unittest.TestCase):
 		self.assertEqual(driver.title, "Login | Alquiler Equipos")
 
 	def tearDown(self):
-		# time.sleep(5);
 		self.driver.close()
 
 if __name__ == '__main__':
-	unittest.main()
+	unittest.main(testRunner = HtmlTestRunner.HTMLTestRunner(output='reports'))

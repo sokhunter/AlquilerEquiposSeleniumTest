@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+import HtmlTestRunner
 from helpers.auth_helper import *
 from helpers.equipment_helper import *
 
@@ -23,7 +24,7 @@ class Equipment(unittest.TestCase):
 		equipmentHelper.list()
 		driver.find_element_by_id("Equipo_btn_Registrar").click()
 		driver.implicitly_wait(5)
-		equipmentHelper.save('danny phantom', '12345678')
+		equipmentHelper.save('EQ_010', 'tabla', 'Equipo de Aventura', 10, '1')
 		equipmentHelper.validate_list_title()
 
 	def test_edit_equipment(self):
@@ -32,7 +33,7 @@ class Equipment(unittest.TestCase):
 		equipmentHelper.list()
 		driver.find_element_by_id("Equipo_btn_Editar").click()
 		driver.implicitly_wait(5)
-		equipmentHelper.save('Leonardo Ramos Ticona', '72331234')
+		equipmentHelper.save('EQ_010', 'tabla', 'Equipo de Aventura', 20, '2')
 		equipmentHelper.validate_list_title()
 		
 
@@ -50,4 +51,4 @@ class Equipment(unittest.TestCase):
 		self.driver.close()
 
 if __name__ == '__main__':
-	unittest.main()
+	unittest.main(testRunner = HtmlTestRunner.HTMLTestRunner(output='reports'))

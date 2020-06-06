@@ -25,7 +25,7 @@ class Client_helper():
 		txtName.send_keys(name)
 
 		cbxDocument = Select(driver.find_element_by_id("Cliente_ddl_TipoDocumento"))
-		cbxDocument.select_by_index(2)
+		cbxDocument.select_by_value(2)
 
 		txtDocumento = driver.find_element_by_id("Cliente_txt_Documento")
 		txtDocumento.clear()

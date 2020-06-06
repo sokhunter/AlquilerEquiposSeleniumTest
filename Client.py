@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+import HtmlTestRunner
 from helpers.auth_helper import *
 from helpers.client_helper import *
 
@@ -50,4 +51,4 @@ class Client(unittest.TestCase):
 		self.driver.close()
 
 if __name__ == '__main__':
-	unittest.main()
+	unittest.main(testRunner = HtmlTestRunner.HTMLTestRunner(output='reports'))
