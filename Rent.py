@@ -18,14 +18,14 @@ class Rent(unittest.TestCase):
 		rentHelper.list()
 		rentHelper.validate_list_title()
 
-	# def test_add_rent(self):
-	# 	driver = self.driver
-	# 	rentHelper = Rent_helper(driver)
-	# 	rentHelper.list()
-	# 	driver.find_element_by_id("Alquiler_btn_Registrar").click()
-	# 	driver.implicitly_wait(5)
-	# 	rentHelper.save('5', '20/05/2020', ['4', '5'])
-	# 	rentHelper.validate_list_title()
+	def test_add_rent(self):
+		driver = self.driver
+		rentHelper = Rent_helper(driver)
+		rentHelper.list()
+		driver.find_element_by_id("Alquiler_btn_Registrar").click()
+		driver.implicitly_wait(5)
+		rentHelper.save('4', '20/05/2020', ['2', '4'])
+		rentHelper.validate_list_title()
 
 	def tearDown(self):
 		self.driver.close()
