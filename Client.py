@@ -24,7 +24,7 @@ class Client(unittest.TestCase):
 		clientHelper.list()
 		driver.find_element_by_id("Cliente_btn_Registrar").click()
 		driver.implicitly_wait(5)
-		clientHelper.save('danny phantom', '12345678')
+		clientHelper.save('danny phantom', '1', '12345678')
 		clientHelper.validate_list_title()
 
 	def test_edit_client(self):
@@ -33,7 +33,7 @@ class Client(unittest.TestCase):
 		clientHelper.list()
 		driver.find_element_by_id("Cliente_btn_Editar").click()
 		driver.implicitly_wait(5)
-		clientHelper.save('Leonardo Ramos Ticona', '72331234')
+		clientHelper.save('Leonardo Ramos Ticona', '3', '72331234')
 		clientHelper.validate_list_title()
 		
 

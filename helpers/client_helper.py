@@ -16,7 +16,7 @@ class Client_helper():
 		driver.find_element_by_id("Layout_btn_Cliente").click()
 		driver.implicitly_wait(5)
 
-	def save(self, name, document):
+	def save(self, name, documentType, document):
 		my_assertion = unittest.TestCase('__init__')
 		driver = self.driver
 
@@ -25,7 +25,7 @@ class Client_helper():
 		txtName.send_keys(name)
 
 		cbxDocument = Select(driver.find_element_by_id("Cliente_ddl_TipoDocumento"))
-		cbxDocument.select_by_value(2)
+		cbxDocument.select_by_value(documentType)
 
 		txtDocumento = driver.find_element_by_id("Cliente_txt_Documento")
 		txtDocumento.clear()
