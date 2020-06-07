@@ -24,7 +24,7 @@ class Auth(unittest.TestCase):
 
 	def test_login(self):
 		authHelper = Auth_helper(self.driver)
-		authHelper.login('knox', 'admin')
+		authHelper.login('knox', 'adminadmin')
 
 	def test_profile(self):
 		driver = self.driver
