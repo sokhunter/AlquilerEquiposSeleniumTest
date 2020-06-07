@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2020-06-06 19:18:24</p>
-                <p class='attribute'><strong>Duration: </strong>63.34 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 3, Error: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2020-06-06 22:55:06</p>
+                <p class='attribute'><strong>Duration: </strong>58.37 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 4</p>
             </div>
         </div>
         <div class="row">
@@ -21,53 +21,14 @@
                 <table class='table table-hover table-responsive'>
                     <thead>
                         <tr>
-                            <th>__main__.Equipment</th>
+                            <th>__main__.Client</th>
                             <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class='success'>
-                            <td class="col-xs-10">test_add_equipment</td>
-                            <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
-                            </td>
-                            <td class="col-xs-1">
-                            </td>
-                        </tr>
-                        <tr class='warning'>
-                            <td class="col-xs-10">test_delete_equipment</td>
-                            <td class="col-xs-1">
-                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
-                            </td>
-                            <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
-                            </td>
-                        </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="content"]/div/h4/strong"}
-  (Session info: MicrosoftEdge=83.0.478.45)
-</p><p style="color:maroon;">Traceback (most recent call last):
-  File "Equipment.py", line 48, in test_delete_equipment
-    equipmentHelper.validate_list_title()
-  File "C:\Users\emyli\Desktop\Stefany\Cursos\Python\selenium\AlquilerEquipos\helpers\equipment_helper.py", line 12, in validate_list_title
-    title = self.driver.find_element_by_xpath('//*[@id="content"]/div/h4/strong').text
-  File "C:\Users\emyli\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\emyli\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "C:\Users\emyli\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\emyli\AppData\Local\Programs\Python\Python38-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="content"]/div/h4/strong"}
-  (Session info: MicrosoftEdge=83.0.478.45)
-
-</p>
-                            </td>
-                        </tr>
-                        <tr class='success'>
-                            <td class="col-xs-10">test_edit_equipment</td>
+                            <td class="col-xs-10">test_add_client</td>
                             <td class="col-xs-1">
                                 <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
@@ -75,7 +36,23 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
                             </td>
                         </tr>
                         <tr class='success'>
-                            <td class="col-xs-10">test_list_equipment</td>
+                            <td class="col-xs-10">test_delete_client</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_edit_client</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_list_clients</td>
                             <td class="col-xs-1">
                                 <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
@@ -84,7 +61,7 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 4, Pass: 3, Error: 1 -- Duration: 63.34 s
+                                Total: 4, Pass: 4 -- Duration: 58.37 s
                             </td>
                         </tr>
                     </tbody>
